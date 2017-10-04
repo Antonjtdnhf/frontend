@@ -1,5 +1,19 @@
-/*var a = prompt("Enter exampl:");
-alert(eval(a));*/
+/*var a = prompt("vedite a");
+var c = prompt("viberite znak");
+var b = prompt("vedite b");
+
+switch (c) {
+  case '+': alert(+a + (+b));
+    break;
+  case '-': alert(+a - (+b));
+    break;
+  case '*': alert(+a * (+b));
+    break;
+  case '/': alert(+a / (+b));
+    break;
+  case '%': alert(+a % (+b));
+    break;
+    }*/
 //// калькулятор
 
 
