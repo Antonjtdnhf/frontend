@@ -1,48 +1,29 @@
-/*var a = prompt("Enter exampl:");
-alert(eval(a));*/
-//// калькулятор
-
-
-/*var count = 0;
-var a = prompt("Enter example:");
-for (var i = 0; i < a.length; i++) {
-  if (a[i] == '(') {
-    count++;
-  }
-  else if (a[i] == ')') {
-    count--;
-  }
-
-  if (count < 0) {
-    alert("There is no opening bracket!")
-    break;
-  }
+/*var N1 = prompt("Enter N");
+var arr2 = new Array;
+for(var i=0; i<=N1; i++ ){
+	arr2[i]=Math.round(Math.random()*(150-50)+50);
 }
-
-if (count > 0) {
-  alert("No closing parenthesis!")
+function polynomial(arr,x){
+	var s=0;
+for(var i=0; i<=arr.length - 1; i++){
+       s=s+arr[i]*Math.pow(x,i);
+	}
+return(s);
 }
-else if(count == 0){
-  alert("OK!")
-}*/
-////Правильность растовки круглых скобок
+var x = prompt("Enter x");
+	console.log(arr2);
+	console.log(polynomial(arr2,x));*/
 
 
-function factorial(b) {
-  var result = 1;
-  for(var i = 1; i <= x; i++){
-    result = result * i;
-  }
-  return result;
-}
 
-var x = prompt ("Enter x:") ;
-var n = prompt ("Enter n:") ;
-var sum = 0;
 
-for (var i = 0; i < n; i++) {
-  sum = factorial(factorial(2*n - 1)) / factorial(2*n) * (Math.pow(x, 2*n - 1)/(2*n + 1));
-  sum += sum;
-}
-alert(x+sum);
-//// ряд Тейлора
+var a = new Date();
+
+var y = a.getFullYear();
+var m = a.getMonth();
+var d = a.getDate();
+d = d + 1;
+var b = new Date(y, m, d, 0, 0, 0);
+var time =Math.round((b.getTime() - a.getTime()) / (1000 * 60));
+
+alert(time,"minutes to the end of the day ");
