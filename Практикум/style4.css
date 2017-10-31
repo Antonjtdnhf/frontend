@@ -127,6 +127,7 @@ div#backspace:hover {
 }
 .active{
   background-color: #b7b7b7;
+  cursor: not-allowed;
 }
 .active:hover{
   background-color: #b7b7b7;

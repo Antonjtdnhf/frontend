@@ -2,6 +2,7 @@ var td = document.getElementsByTagName("td"),
   out = document.getElementById("output"),
   back = document.getElementById("backspace"),
   operatop = "+",
+  enter = true,
   temp = "0",
   systemNumber = "dec",
   memory = "";
@@ -26,7 +27,8 @@ for (var i = 0; i < td.length; i++) {
 }
 
 function clickbut(type) {
-
+  if(type == "MR") readMemory();
+  if(type == "MS") saveMemory();
   if ((type == "sin" || type == "asin" || type == "cos" || type == "acos" ||
       type == "tan" || type == "atan" || type == "x<sup>2</sup>" || type == "x<sup>3</sup>" ||
       type == "√" || type == "ln" || type == "«1") && out.innerHTML.length > 0) {
@@ -49,8 +51,6 @@ function clickbut(type) {
     }
     if (type == "=") output();
   }
-  //if(type = "MR") readMemory();
-  //if(type = "MS") saveMemory();
 }
 
 function calc(x) {
@@ -92,8 +92,12 @@ function calc(x) {
 }
 
 function trigonometryPower(x) {
+  enter = false;
   switch (x) {
     case "sin":
+      if(out.innerHTML == Math.PI){
+        out.innerHTML = 0;
+      }
       out.innerHTML = Math.sin(out.innerHTML);
       break;
     case "asin":
@@ -106,6 +110,9 @@ function trigonometryPower(x) {
       out.innerHTML = Math.acos(out.innerHTML);
       break;
     case "tan":
+    if(out.innerHTML == Math.PI){
+      out.innerHTML = 0;
+    }
       out.innerHTML = Math.tan(out.innerHTML);
       break;
     case "atan":
@@ -133,11 +140,22 @@ function output() {
   calc("+");
   if (out.innerHTML != "error") out.innerHTML = temp;
   temp = "0";
+  enter = false;
 }
 
 function outadd(x) {
   if (out.innerHTML == "error") out.innerHTML = "";
-  out.innerHTML += x;
+  if (x == "." && checkpoint(out.innerHTML)>0){
+    return false;
+  }
+  else{
+    if (enter)
+    out.innerHTML += x;
+    else {
+      out.innerHTML = x;
+      enter = true;
+    }
+  }
 }
 
 function clear() {
@@ -147,6 +165,7 @@ function clear() {
 }
 
 function constant(x) {
+  enter = false;
   switch (x) {
     case "π":
       out.innerHTML = Math.PI;
@@ -180,6 +199,7 @@ function changesys(x) {
   }
   if (out.innerHTML !== "") {
     switch (x) {
+      enter = false;
       case "bin":
         bin();
         if (systemNumber == "oct") {
@@ -237,7 +257,6 @@ function changesys(x) {
 
     }
   }
-
   systemNumber = x;
 }
 
@@ -289,10 +308,25 @@ function hex() {
   }
 }
 
-/*function saveMemory() {
-
+function saveMemory() {
+  memory = out.innerHTML;
 }
 
 function readMemory() {
+  if (memory != "") {
+    out.innerHTML = memory;
+  }else {
+    out.innerHTML = 0;
+  }
+}
 
-}*/
+function checkpoint(x){
+  var count = 0;
+  for (var i = 0; i < x.length; i++) {
+    if(x[i] == "."){
+      count++;
+      break;
+    }
+  }
+  return count;
+}
