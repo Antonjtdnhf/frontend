@@ -198,8 +198,9 @@ function changesys(x) {
       break;
   }
   if (out.innerHTML !== "") {
+    enter = false;
     switch (x) {
-      enter = false;
+
       case "bin":
         bin();
         if (systemNumber == "oct") {
