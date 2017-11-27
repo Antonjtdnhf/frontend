@@ -26,4 +26,4 @@ d = d + 1;
 var b = new Date(y, m, d, 0, 0, 0);
 var time =Math.round((b.getTime() - a.getTime()) / (1000 * 60));
 
-alert(time,"minutes to the end of the day ");
+alert(time + "minutes to the end of the day ");

@@ -1,0 +1,90 @@
+html, body, #page {
+  height: 100%;
+  margin: 0;
+}
+
+#page {
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+}
+
+#workplace {
+  background: #fff;
+  border: 1px solid #999;
+  width: 70%;
+  height: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+}
+
+#tools {
+  width: 25%;
+  height: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+
+#tools .button, #clear {
+  display: inline-block;
+  min-width: 80px;
+  text-align: center;
+  margin: 15px 5px;
+  padding: 10px 15px 12px;
+  font: normal 16px/1.5 'Open Sans', sans-serif;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 1px rgba(0, 0, 0, 0.1), inset 0 -10px 20px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  color: #777;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+  background: #fff;
+  transition: all ease .3s
+}
+
+#tools .button.active, #tools .button:hover, #clear:hover {
+  background: #b1b1b1;
+  color: #fff;
+  text-shadow: 1px 1px 1px #999;
+}
+
+.workplaceElement {
+  position: absolute;
+  border: 1px solid #000;
+  background: transparent;
+  box-sizing: border-box;
+}
+.workplaceElement.text{
+  border: none;
+  min-width: 150px;
+}
+.workplaceElement.image{
+  background-size: cover;background-repeat: no-repeat;
+  border: none;
+}
+.workplaceElement.circle {
+  border-radius: 50%;
+}
+.workplaceElement.circle,.workplaceElement.square{
+  border-width: 1px;
+  border-color:#000;
+  opacity: 1;
+}
+
+.preview{
+  width: 100px;height:80px;background-size: cover;background-repeat: no-repeat;
+}
+#properties{
+  border: 1px solid #000;
+  min-height: 50px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+}
+.wrapperProperties{
+  display: inline-block;
+  padding-bottom: 20px;
+  padding-top: 10px;
+}

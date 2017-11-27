@@ -1,0 +1,8 @@
+input{
+  margin-bottom: 25px;
+}
+.valid{
+  color: red;
+  padding-left: 15px;
+  display: none;
+}
