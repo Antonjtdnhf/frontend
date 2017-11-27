@@ -52,7 +52,7 @@ document.addEventListener('mouseup', function(e) {
   e.preventDefault();
   if (window.workplaceElementCurrentEdit) {
     currentselect = workplaceElementCurrentEdit;
-    readProperty();
+    readProperty(currentwidget);
     workplaceElementCurrentEdit.removeAttribute('id');
   }
 
@@ -153,20 +153,20 @@ function showProperty(x) {
   }
 }
 
-function readProperty() {
+function readProperty(x) {
   cordinatY.value = parseInt(getComputedStyle(currentselect).top) || parseInt(getComputedStyle(workplace).height) - parseInt(getComputedStyle(currentselect).height) - parseInt(getComputedStyle(currentselect).bottom);
   cordinatX.value = parseInt(getComputedStyle(currentselect).left) || parseInt(getComputedStyle(workplace).width) - parseInt(getComputedStyle(currentselect).width) - parseInt(getComputedStyle(currentselect).right);
   opacity.value = getComputedStyle(currentselect).opacity;
 
-  if (currentwidget == 'circle' || currentwidget == 'square' || currentwidget == 'imagine') {
+  if (x == 'circle' || x == 'square' || x == 'imagine') {
     elementWidth.value = currentselect.offsetWidth;
     elementHeight.value = currentselect.offsetHeight;
   }
-  if (currentwidget == 'text') {
+  if (x == 'text') {
     fontSize.value = getComputedStyle(currentselect).fontSize;
   }
-  if (currentwidget == 'imagine') {}
-  if (currentwidget == 'circle' || currentwidget == 'square') {
+  if (x == 'imagine') {}
+  if (x == 'circle' || x == 'square') {
     color.value = getComputedStyle(currentselect).backgroundColor;
     borderSize.value = getComputedStyle(currentselect).borderTopWidth;
     colorBorder.value = getComputedStyle(currentselect).borderColor;
@@ -175,7 +175,21 @@ function readProperty() {
 
 function selectWidget(x) {
   currentselect = x;
-  readProperty();
+
+  showProperty(
+    (function () {
+      if(x.classList.contains('circle'))return "circle";
+      if(x.classList.contains('square'))return "square";
+      if(x.classList.contains('image'))return "imagine";
+      if(x.classList.contains('text'))return "text";
+    })()
+  );
+  readProperty(  (function () {
+      if(x.classList.contains('circle'))return "circle";
+      if(x.classList.contains('square'))return "square";
+      if(x.classList.contains('image'))return "imagine";
+      if(x.classList.contains('text'))return "text";
+    })());
 }
 
 function writeProperty() {
