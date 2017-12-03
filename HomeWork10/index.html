@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="page">
+
+    <div id="addblock">
+      <button type="button" name="addmarket" id="addmarket">Add Market</button><button type="button" name="addshop" id="showmarkets">Show all market</button>
+      <!--<button type="button" name="addproduct" id="addproduct">Add Product</button>-->
+    </div>
+
+    <div id="showallmarkets1" class="markets">
+
+    </div>
+
+    <div class="popup addshop">
+      <div class="header"><span>Add New Shop</span></div>
+      <div class="inputs">
+        <div class="input-line">
+          <input placeholder="Enter shop name" type="text" id="shopname">
+        </div>
+        <div class="input-line">
+          <input placeholder="Enter shop address" type="text" id="shopaddress">
+        </div>
+        <div class="input-line">
+          <input placeholder="Enter extra change" type="text" id="shopextra">
+        </div>
+        <div class="input-line">
+          <input placeholder="Enter income" type="text" id="shopincome">
+        </div>
+      </div>
+      <button class="save" type="button" name="saveshop" id="saveshop">Add Shop</button>
+    </div>
+
+    <div class="popup addproduct">
+      <div class="header"><span>Add New Product</span></div>
+      <div class="inputs">
+        <div class="input-line">
+          <input placeholder="Enter product name" type="text" id="productName">
+        </div>
+        <div class="input-line">
+          <input placeholder="Enter product type" type="text" id="productType">
+        </div>
+        <div class="input-line">
+          <input placeholder="Enter products count" type="text" id="productCount">
+        </div>
+        <div class="input-line">
+          <input placeholder="Enter product cost" type="text" id="productCost">
+        </div>
+        <div class="input-line">
+          <input placeholder="Enter date" type="date" id="productDate">
+        </div>
+      </div>
+      <button class="save" type="button" name="saveshop" id="saveProduct">Add product(s)</button>
+    </div>
+
+  </div>
+  <script type="text/javascript" src="ui.js"></script>
+</body>
+
+</html>
