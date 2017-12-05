@@ -3,8 +3,8 @@ var x = 0,
 y = 0,
 flag = false;
 context.strokeStyle = "#000";
-context.lineWidth = 5;
-context.lineCap = "round";
+
+
 
 
 canvas.addEventListener('mousemove', function(e){

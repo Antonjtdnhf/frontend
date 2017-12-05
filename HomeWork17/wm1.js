@@ -6,9 +6,6 @@ var x = 0,
   y_,
   flag = false;
 context.strokeStyle = "#000";
-context.lineWidth = 5;
-context.lineCap = "round";
-
 
 (function create() {
   if (localStorage.x) {
@@ -59,11 +56,3 @@ canvas.addEventListener('mousedown', function(e) {
 canvas.addEventListener('mouseup', function() {
   flag = false;
 });
-
-/*e x = localStorage.number;
-if (!x) {
-  x = 0;
-}
-x = x * 1 + 1;
-localStorage.number = x;
-localSt.innerHTML = x;*/
