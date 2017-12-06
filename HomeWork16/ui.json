@@ -1,0 +1,56 @@
+[{
+  "url": "01 The Day Is My Enemy.mp3",
+  "groupName": "The Prodigy",
+  "songName": "The Day Is My Enemy",
+  "albumName": "The Day Is My Enemy",
+  "img": "cover.jpg"
+  },
+{
+  "url": "02 Nasty.mp3",
+  "groupName": "The Prodigy",
+  "songName": "Nasty",
+  "albumName": "The Day Is My Enemy",
+  "img": "cover.jpg"
+  },
+{
+  "url": "06 Wild Frontier.mp3",
+  "groupName": "The Prodigy",
+  "songName": "Wild Frontier",
+  "albumName": "The Day Is My Enemy",
+  "img": "cover.jpg"
+  },
+{
+  "url": "07 Rok-Weiler.mp3",
+  "groupName": "The Prodigy",
+  "songName": "Rok-Weiler",
+  "albumName": "The Day Is My Enemy",
+  "img": "cover.jpg"
+  },
+{
+  "url": "12 Medicine.mp3",
+  "groupName": "The Prodigy",
+  "songName": "Medicine",
+  "albumName": "The Day Is My Enemy",
+  "img": "cover.jpg"
+  },
+  {
+    "url": "01 - Invaders Must Die.mp3",
+    "groupName": "The Prodigy",
+    "songName": "Invaders Must Die",
+    "albumName": "Invaders Must Die",
+    "img": "front.jpg"
+    },
+    {
+      "url": "02 - Omen.mp3",
+      "groupName": "The Prodigy",
+      "songName": "Omen",
+      "albumName": "Invaders Must Die",
+      "img": "front.jpg"
+      },
+      {
+        "url": "09 - World's On Fire.mp3",
+        "groupName": "The Prodigy",
+        "songName": "World's On Fire",
+        "albumName": "Invaders Must Die",
+        "img": "front.jpg"
+        }]

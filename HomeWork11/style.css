@@ -1,0 +1,6 @@
+#spisok1{
+  display: none;
+}
+#spisok1.active{
+  display: block;
+}

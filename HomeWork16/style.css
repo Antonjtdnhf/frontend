@@ -1,0 +1,168 @@
+body {
+  margin: 0;
+  background: rgb(240, 240, 240);
+}
+
+button.fa {
+  background: none;
+  border: none;
+  outline: none;
+  user-select: none;
+}
+
+#timeLine {
+  width: 100%;
+  height: 3px;
+  background: rgb(203, 203, 203);
+}
+
+#timeLineWrap {
+  cursor: pointer;
+  padding: 10px 0
+}
+
+#player {
+  width: 500px;
+  margin: 0 auto;
+  background: rgb(248, 248, 248);
+  border-radius: 8px;
+  box-shadow: 0 0 100px 0 rgba(0, 0, 0, .1);
+  padding: 30px;
+  user-select: none;
+  border: 1px solid rgb(191, 189, 189);
+}
+
+#time {
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+#currentTimeSong {
+  float: left;
+}
+
+#allTimeSong {
+  float: right;
+}
+
+#playerButton {
+  overflow: hidden;
+  padding: 20px 0;
+}
+
+#buttonRepeat {
+  float: left;
+}
+
+#buttonRepeat .fa {
+  color: #999;
+  cursor: pointer;
+  transition: all ease .3s;
+}
+
+#buttonRepeat .fa:hover {
+  color: #000
+}
+
+#buttonRepeat .fa.active {
+  color: #000
+}
+
+#buttonPlayStopPause {
+  float: right;
+}
+
+#buttonPlayStopPause .fa {
+  width: 40px;
+  height: 40px;
+  font-size: 12px;
+  border-radius: 50%;
+  transition: all ease .3s;
+  cursor: pointer;
+}
+
+#buttonPlayStopPause .fa:first-child {
+  color: #fff;
+  background: rgb(232, 26, 112);
+}
+
+#buttonPlayStopPause .fa:hover {
+  color: #fff;
+  background: rgb(232, 26, 112);
+}
+
+#theSlider {
+  background: rgb(232, 26, 112);
+  height: 3px;
+  position: relative;
+}
+
+#theSlider:before {
+  content: '';
+  background: rgb(232, 26, 112);
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  border-radius: 50%
+}
+
+#theSliderVolume {
+  background: rgb(232, 26, 112);
+  height: 3px;
+  position: relative;
+}
+
+#theSliderVolume:before {
+  content: '';
+  background: rgb(232, 26, 112);
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  border-radius: 50%
+}
+
+#volumeLine {
+  width: 100%;
+  height: 3px;
+  background: rgb(203, 203, 203);
+}
+#volume{max-width:20px;min-width:20px}
+#volumeLineWrap {
+  cursor: pointer;
+  padding: 5px 0;
+  display: inline-block;
+  width: 100px;
+  margin: 4px 0 0 15px;
+}
+
+#playList{
+  padding: 15px 0
+}
+
+.song:first-child {
+  border: none
+}
+
+.song {
+  min-height: 30px;
+  padding: 20px 10px 20px 30px;
+  border-top: 1px solid #c4c4c4;
+  transition: all ease .3s;
+  cursor: pointer;
+  position: relative;
+}
+.song.active:after{
+  content: '';
+  background: rgb(232, 26, 112);
+  width: 8;
+  height: 8;
+  position: absolute;
+  top: 25px;
+  left: 0;
+  border-radius: 50%
+}
+.song:hover{background: #ededed}

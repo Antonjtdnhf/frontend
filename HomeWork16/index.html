@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+  </head>
+  <body>
+    <div id="player">
+      <div id="playerNameSong"> </div>
+      <div id="playerButton">
+        <span id="buttonRepeat">
+          <button type="button" class="fa fa-repeat" name="button" id="repeat"></button>
+          <div id="volume" class="fa fa-volume-up"></div>
+          <div id="volumeLineWrap">
+            <div id="volumeLine">
+              <div id="theSliderVolume" style="width:100%">
+              </div>
+            </div>
+          </div>
+        </span>
+        <span id="buttonPlayStopPause">
+          <button type="button" name="button" id="playPause" class="fa fa-play"></button>
+          <button type="button" name="button" id="stop1" class="fa fa-stop"></button>
+          <button type="button" name="button" id="slower" class="fa fa-backward"></button>
+          <button type="button" name="button" id="faster" class="fa fa-forward"></button>
+
+        </span>
+      </div>
+      <div id="timeLineWrap">
+        <div id="timeLine">
+          <div id="theSlider" style="width:0%">
+          </div>
+        </div>
+      </div>
+
+      <div id="time">
+        <span id="currentTimeSong">00:00</span>
+        <span id="allTimeSong">00:00</span>
+      </div>
+      <div id="playList">
+
+      </div>
+    </div>
+
+    <audio src="" id="song"></audio>
+    <script type="text/javascript" src="task2.js"></script>
+  </body>
+</html>
